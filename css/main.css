@@ -94,11 +94,62 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+   @font-face {
+   font-family: SF Distant Galaxy;
+   src: url('fonts/SFDistantGalaxyAltOutline-Italic.otf') format('opentype');
+   }
+
 .page-wrapper {
   padding: 5%;
 
 }
 
+/*** Video Background ***/
+
+body {
+  background: url("space.jpeg");
+}
+
+.page-wrapper {
+  background: rgba(247, 247, 247, .5);
+
+}
+
+h1 {
+  color: gold;
+  font-family: 'SF Distant Galaxy';
+  text-align: center;
+  text-shadow: 3px 3px #000;
+}
+
+#bgvid {
+  display: none;
+}
+
+@media all and (min-width: 768px){
+
+video#bgvid {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(space.jpg) no-repeat;
+    background-size: cover;
+}
+
+h1 {
+  font-size: 3em;
+}
+}
 
 
 

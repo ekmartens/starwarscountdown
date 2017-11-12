@@ -18,11 +18,20 @@
 
         <!-- Add your site or application content here -->
         <div class="page-wrapper">
+          <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+            <source src="space.webm" type="video/webm">
+            <source src="space.mp4" type="video/mp4">
+              <!--[if lt IE 9]>
+                <script>
+                 document.createElement('video');
+                </script>
+              <![endif]-->
+          </video>
           <div class="main-content">
-            <button>Welcome</button>
+            <h1 id="swHeader">X Days Until Star Wars</h1>
+            <h3 id="releaseDay">Date</h3>
+
           </div>
-
-
         </div>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>

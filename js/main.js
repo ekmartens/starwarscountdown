@@ -1,14 +1,15 @@
-var welcome = document.getElementById("welcomeButton");
-var name;
-var age;
-var startScreen = function(){
-  name = input('What is your name?');
-  age = input('What is your age?');
+var d = new Date();
+d.setFullYear(2017, 11, 15);
+document.getElementById("releaseDay").innerHTML = d;
+
+var showDaysToStarWars = document.getElementById('swHeader');
+var today = new Date();
+var starWars = d;
+
+var daysToStarWars = function(){
+  if today < starWars {
+
+  }
+
+
 }
-
-document.getElementById("welcomeButton").addEventListener("click", startScreen);
-
-
-
-
-/* object.addEventListener("load", myScript); */
