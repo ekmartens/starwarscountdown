@@ -111,7 +111,7 @@ body {
 }
 
 .page-wrapper {
-  background: rgba(247, 247, 247, .5);
+  background: rgba(247, 247, 247, .65);
 
 }
 
@@ -122,8 +122,19 @@ h1 {
   text-shadow: 3px 3px #000;
 }
 
+span {
+  color: #cc0000;
+}
+
 #bgvid {
   display: none;
+}
+
+#releaseDay {
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px #000;
+
 }
 
 @media all and (min-width: 768px){
@@ -149,6 +160,16 @@ video#bgvid {
 h1 {
   font-size: 3em;
 }
+
+.quotes-container {
+  background: #fff;
+  box-shadow: 0px 1px 10px #000;
+  height: 200px;
+  margin-left: 31%;
+  padding: 2%;
+  width: 33%;
+}
+
 }
 
 
