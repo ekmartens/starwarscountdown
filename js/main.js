@@ -1,3 +1,6 @@
+var vid = document.getElementById("bgvid");
+vid.playbackRate = 0.35;
+
 var d = new Date();
 d.setMonth(11);
 d.setDate(15);
@@ -15,7 +18,7 @@ var changeText = function() {
   var currentDay = today.getDate();
   var swRelease = d.getDate();
   var numDays = (30 - currentDay) + swRelease;
-  swHeader.innerText = numDays;
+  swHeader.innerText = numDays + " Days";
 }
 
 changeText();

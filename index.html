@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/animate.css">
+        <script src="https://use.fontawesome.com/31802e08a0.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -18,7 +19,7 @@
 
         <!-- Add your site or application content here -->
         <div class="page-wrapper">
-          <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+          <video playsinline autoplay muted loop poster="space.jpeg" id="bgvid">
             <source src="space.webm" type="video/webm">
             <source src="space.mp4" type="video/mp4">
               <!--[if lt IE 9]>
@@ -28,15 +29,26 @@
               <![endif]-->
           </video>
           <div class="main-content">
-            <h1><span id="swHeader" class="animated pulse">X </span> Days Until Star Wars!</h1>
+            <h1 id="swHeader" class="animated infinite pulse">X Days</h1>
+            <h1 id="secondHalf">Until Star Wars!</h1>
             <h3 id="releaseDay">Date</h3>
 
             <section class="quotes-container">
-              <p id="swQuote">May the Force be with you.</p>
+              <div class="tickets">
+                <a href="" target="_blank"><img src="img/ticket.png" alt="ticket" />Find Tickets</a>
+              </div>
+              <h2 id="swQuote">May the Force be with you.</h2>
             </section>
 
           </div>
+
         </div>
+
+        <footer>
+          <p>Copyright &copy; EK Martens 2017</p>
+          <p>Powered by HTML, CSS &amp; JavaScript</p>
+        </footer>
+
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
