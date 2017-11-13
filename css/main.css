@@ -155,6 +155,8 @@ h2 {
 }
 
 footer {
+  background: #000;
+  padding-bottom: 5%;
   padding-top: 5%;
   text-align: center;
 }
