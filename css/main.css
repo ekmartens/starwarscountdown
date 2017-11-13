@@ -200,6 +200,11 @@ h2 {
   width: 33%;
 }
 
+footer p {
+  padding-top: 0;
+  line-height: .5;
+}
+
 }
 
 
