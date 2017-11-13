@@ -101,7 +101,7 @@ textarea {
    src: url('fonts/SFDistantGalaxyAlternate-It.woff2') format('woff2'), /* Super Modern Browsers */
         url('fonts/SFDistantGalaxyAlternate-Italic.woff') format('woff'), /* Pretty Modern Browsers */
         url('fonts/SFDistantGalaxyAlternate-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
-        url('fonts/SFDistantGalaxyAlternate-Italic.svg#svgSFDistantGalaxy') format('svg'); /* Legacy iOS */
+        url('fonts/SFDistantGalaxyAlternate-Italic.svg#SFDistantGalaxyAlternate-Italic') format('svg'); /* Legacy iOS */
 }
 
 .page-wrapper {
