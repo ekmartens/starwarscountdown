@@ -97,11 +97,11 @@ textarea {
    @font-face {
    font-family: 'SF Distant Galaxy';
    src: url('fonts/SFDistantGalaxyAltOutline-Italic.otf') format('opentype');
-   src: url('SFDistantGalaxyAlternate-It.eot'); /* IE9 Compat Modes */
-   src: url('SFDistantGalaxyAlternate-It.woff2') format('woff2'), /* Super Modern Browsers */
-        url('SFDistantGalaxyAlternate-Italic.woff') format('woff'), /* Pretty Modern Browsers */
-        url('SFDistantGalaxyAlternate-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
-        url('SFDistantGalaxyAlternate-Italic.svg#svgSFDistantGalaxy') format('svg'); /* Legacy iOS */
+   src: url('fonts/SFDistantGalaxyAlternate-It.eot'); /* IE9 Compat Modes */
+   src: url('fonts/SFDistantGalaxyAlternate-It.woff2') format('woff2'), /* Super Modern Browsers */
+        url('fonts/SFDistantGalaxyAlternate-Italic.woff') format('woff'), /* Pretty Modern Browsers */
+        url('fonts/SFDistantGalaxyAlternate-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('fonts/SFDistantGalaxyAlternate-Italic.svg#svgSFDistantGalaxy') format('svg'); /* Legacy iOS */
 }
 
 .page-wrapper {
