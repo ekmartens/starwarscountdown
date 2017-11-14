@@ -20,18 +20,17 @@ var showCountdown = function(){
     var currentDay = today.getDate();
     var swDay = d.getDate();
     var month = today.getMonth();
-    var months = 11 - month;
+    var year = today.getFullYear();
+    var months;
     var days;
     var hours;
     var seconds;
 
-    if ( month === 3 || 5 || 7 || 10 ) {
-    days = ( 29 - currentDay ) - swDay;
-  } else if ( month === 11 ) {
-    days = (swDay - 1) - currentDay;
-  } else {
-    days = ( 30 - currentDay );
-  }
+    if ( month < 11 ) {
+      days = ( 30 - currentDay ) + ( swDay - 1);
+    } else {
+      days = ( swDay - 1 ) - currentDay
+    }
 
    if ( today != swDay ){
     var currentHour = today.getHours();
@@ -41,22 +40,37 @@ var showCountdown = function(){
     var currentSecond = today.getSeconds();
     seconds = 60 - currentSecond;
   } else {
+    days = 0;
     hours = 0;
     minutes = 0;
     seconds = 0;
   }
 
+
   var countDown;
 
-  if ( months === 1 && days === 1 ) {
-    countDown = months + " Month " + days + " Day " + hours + " Hrs " + minutes + " Min " + seconds + " Sec ";
+  if ( days === 1 ) {
+    countDown = days + " Day " + hours + " Hrs " + minutes + " Min " + seconds + " Sec ";
   } else if (months === 1 && days != 1) {
-    countDown = months + " Month " + days + " Days " + hours + " Hrs " + minutes + " Min " + seconds + " Sec ";
+    countDown = days + " Days " + hours + " Hrs " + minutes + " Min " + seconds + " Sec ";
+  } else if ( currentDay >= 15 && month === 11 || year > 2017 ) {
+    countDown = "Now Playing!"
+  }
+  else {
+    countDown = days + " Days " + hours + " Hrs " + minutes + " Min " + seconds + " Sec ";
+  }
+
+  var subtitle = document.getElementById('secondHalf');
+  var message;
+
+  if ( currentDay >= 15 && month === 11 || year > 2017 ) {
+    message = "Star Wars Episode VIII";
   } else {
-    countDown = months + " Months " + days + " Days " + hours + " Hrs " + minutes + " Min " + seconds + " Sec ";
+    message = "Until Star Wars!";
   }
 
     showDaysToStarWars.innerText = countDown;
+    subtitle.innerText = message;
 };
 
 updateText();
