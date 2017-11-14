@@ -19,16 +19,44 @@ var showCountdown = function(){
     var today = new Date();
     var currentDay = today.getDate();
     var swDay = d.getDate();
-    var days = (30 - currentDay) + swDay;
-    var currentHour = today.getHours();
-    var hours = 23 - currentHour;
-    var currentMinute = today.getMinutes();
-    var minutes = 60 - currentMinute;
-    var currentSecond = today.getSeconds();
-    var seconds = 60 - currentSecond;
-    var countDown = days + " Days " + hours + " Hrs " + minutes + " Min " + seconds + " Sec ";
-    showDaysToStarWars.innerText = countDown;
+    var month = today.getMonth();
+    var months = 11 - month;
+    var days;
+    var hours;
+    var seconds;
 
+    if ( month === 3 || 5 || 7 || 10 ) {
+    days = ( 29 - currentDay ) - swDay;
+  } else if ( month === 11 ) {
+    days = (swDay - 1) - currentDay;
+  } else {
+    days = ( 30 - currentDay );
+  }
+
+   if ( today != swDay ){
+    var currentHour = today.getHours();
+    hours = 23 - currentHour;
+    var currentMinute = today.getMinutes();
+    minutes = 60 - currentMinute;
+    var currentSecond = today.getSeconds();
+    seconds = 60 - currentSecond;
+  } else {
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
+  }
+
+  var countDown;
+
+  if ( months === 1 && days === 1 ) {
+    countDown = months + " Month " + days + " Day " + hours + " Hrs " + minutes + " Min " + seconds + " Sec ";
+  } else if (months === 1 && days != 1) {
+    countDown = months + " Month " + days + " Days " + hours + " Hrs " + minutes + " Min " + seconds + " Sec ";
+  } else {
+    countDown = months + " Months " + days + " Days " + hours + " Hrs " + minutes + " Min " + seconds + " Sec ";
+  }
+
+    showDaysToStarWars.innerText = countDown;
 };
 
 updateText();
